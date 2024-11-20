@@ -41,7 +41,7 @@
 &kp TAB     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6    &kp N7    &kp N8    &kp N9     &kp N0   &kp BSPC
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &kt F11  &kt F12
 &kp LSHFT   &kp F1        &kt F2        &kt F3        &kt F4        &kt F5          &kt F6    &kt F7    &kt F8    &kt F9     &kt F10  &kt ESCAPE
-                                        &kp LGUI      &trans        &kp SPACE       &kp RET   &trans    &kp RALT
+                                        &kp LGUI      &trans        &kp SPACE       &kp RET   &to 3     &kp RALT
             >;
         };
 
@@ -54,10 +54,19 @@
 
             display-name = "Raise";
             bindings = <
-&kp TAB    &kp EXCL   &kp AT     &kp HASH  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp CARET    &kp AMPS    &kp KP_MULTIPLY  &kp EQUAL  &kp MINUS  &kp BSPC
-&kp LCTRL  &kt GRAVE  &kt SLASH  &kt BSLH  &kp LEFT_BRACKET      &kp RIGHT_BRACKET        &kt PERCENT  &kt DOLLAR  &trans           &trans     &trans     &trans
-&kp LSHFT  &trans     &trans     &trans    &trans                &trans                   &trans       &trans      &trans           &trans     &trans     &trans
-                                 &kp LGUI  &trans                &kp SPACE                &kp RET      &trans      &kp RALT
+&kp TAB    &kp EXCL   &kp QUESTION  &kp AT    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp CARET    &kp AMPS    &kp KP_MULTIPLY  &kp EQUAL  &kp MINUS  &kp BSPC
+&kp LCTRL  &kt GRAVE  &kt SLASH     &kt BSLH  &kp LEFT_BRACKET      &kp RIGHT_BRACKET        &kt PERCENT  &kt DOLLAR  &trans           &trans     &trans     &trans
+&kp LSHFT  &trans     &trans        &kt HASH  &trans                &trans                   &trans       &trans      &trans           &trans     &trans     &trans
+                                    &kp LGUI  &to 3                 &kp SPACE                &kp RET      &trans      &kp RALT
+            >;
+        };
+
+        layer_3 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans      &trans           &trans             &trans                &trans                &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kt K_MUTE  &kt C_VOLUME_UP  &kt C_VOLUME_DOWN  &kt C_BRIGHTNESS_INC  &kt C_BRIGHTNESS_DEC  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans      &trans           &trans             &trans                &trans                &trans
+                        &trans  &trans  &trans    &trans      &trans           &trans
             >;
         };
     };
